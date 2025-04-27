@@ -172,12 +172,3 @@
 
 ---
 
-## 부가 라이브러리
-
-
-<img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/> 
-
-- Redux-persist
-- uuid
-
----
