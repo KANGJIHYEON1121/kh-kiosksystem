@@ -1,0 +1,4 @@
+userId,userPassword,userName,userPhoneNum
+master,1234,관리자,01000000000
+kgd,1234,강길동,01011112222
+hgd,1234,홍길동,01022221111

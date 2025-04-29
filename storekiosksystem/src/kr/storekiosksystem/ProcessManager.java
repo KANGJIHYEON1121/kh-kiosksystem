@@ -1,12 +1,13 @@
 package kr.storekiosksystem;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.nio.charset.StandardCharsets;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -58,9 +59,9 @@ public class ProcessManager {
 // 	회원가입 함수
 	public void userJoin(ArrayList<User> userList) {
 		try {
-			Scanner scan = new Scanner(System.in);
-//			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/userList.txt");
-			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/userList.txt");
+			Scanner scan = new Scanner(System.in, "EUC-KR");
+			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/userList.txt");
+//			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/userList.txt");
 			PrintStream out = new PrintStream(fo);
 
 			out.printf("%s", userTitle);
@@ -113,6 +114,8 @@ public class ProcessManager {
 						data.getUserPhoneNum());
 			}
 
+			userSave(userList);
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -120,7 +123,7 @@ public class ProcessManager {
 
 // 	메뉴 수정
 	public void editMenu(ArrayList<Menu> storeMenu) {
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in, "EUC-KR");
 		System.out.print("수정 메뉴: ");
 		String editMenu = scan.nextLine();
 		boolean searchFlag = false;
@@ -162,7 +165,7 @@ public class ProcessManager {
 
 // 	메뉴 삭제
 	public void deleteMenu(ArrayList<Menu> storeMenu) {
-		Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in, "EUC-KR");
 
 		System.out.print("메뉴 삭제: ");
 		String deleteMenu = scan.nextLine();
@@ -185,10 +188,11 @@ public class ProcessManager {
 
 //	 메뉴 입력 함수
 	public void menuInput(ArrayList<Menu> storeMenu) {
-		Scanner scan = new Scanner(new InputStreamReader(System.in, StandardCharsets.UTF_8));
+		Scanner scan = new Scanner(System.in, "EUC-KR");
 
 		// 파일메뉴 추가
 		while (true) {
+
 			System.out.print("메뉴 등록: ");
 			String menuInput = scan.nextLine();
 			boolean isMenuCheck = Pattern.matches("^[가-힣]*$", menuInput);
@@ -221,8 +225,8 @@ public class ProcessManager {
 		FileInputStream fi;
 
 		try {
-//			fi = new FileInputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
-			fi = new FileInputStream("C:/workspace/storekiosksystem/res/menuList.txt");
+			fi = new FileInputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
+//			fi = new FileInputStream("C:/workspace/storekiosksystem/res/menuList.txt");
 			Scanner scan = new Scanner(fi);
 
 			if (scan.hasNextLine()) {
@@ -250,8 +254,8 @@ public class ProcessManager {
 // 	메뉴 저장 함수
 	public void menuSave(ArrayList<Menu> storeMenu) {
 		try {
-//			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
-			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/menuList.txt");
+			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
+//			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/menuList.txt");
 			PrintStream out = new PrintStream(fo);
 			Scanner scan = new Scanner(System.in);
 
@@ -277,8 +281,8 @@ public class ProcessManager {
 // 	회원 저장 함수
 	public void userSave(ArrayList<User> userList) {
 		try {
-//			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
-			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/menuList.txt");
+			FileOutputStream fo = new FileOutputStream("D:/javaWorkspace/storekiosksystem/res/menuList.txt");
+//			FileOutputStream fo = new FileOutputStream("C:/workspace/storekiosksystem/res/menuList.txt");
 			PrintStream out = new PrintStream(fo);
 			Scanner scan = new Scanner(System.in);
 
@@ -318,8 +322,8 @@ public class ProcessManager {
 		FileInputStream fi;
 
 		try {
-//			fi = new FileInputStream("D:/javaWorkspace/storekiosksystem/res/userList.txt");
-			fi = new FileInputStream("C:/workspace/storekiosksystem/res/userList.txt");
+			fi = new FileInputStream("D:/javaWorkspace/storekiosksystem/res/userList.txt");
+//			fi = new FileInputStream("C:/workspace/storekiosksystem/res/userList.txt");
 			Scanner scan = new Scanner(fi);
 
 			if (scan.hasNextLine()) {
