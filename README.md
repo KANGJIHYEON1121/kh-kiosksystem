@@ -1,6 +1,6 @@
 # 주문 관리 시스템
 
-![Image](https://github.com/user-attachments/assets/e3332ef9-3d97-4d6e-bb69-42fedb4de732)
+![Image](https://github.com/user-attachments/assets/d45a7851-6d26-42c6-be06-713fb253454c)
 
 **본 프로그램은 매장 운영을 지원하기 위한 간단한 POS 시스템으로, 주문, 장바구니 관리, 결제, 매출 확인 등의 기능을 통해 사용자와 관리자의 편의를 제공합니다.**
 
