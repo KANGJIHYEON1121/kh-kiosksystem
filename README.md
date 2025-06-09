@@ -13,7 +13,7 @@
 📁 본 프로젝트는 아직 실제 DBMS를 사용하지 않고, Java의 파일 입출력 기능을 활용하여 데이터 저장 및 조회를 구현한 파일 기반 모의 DB 시스템입니다.  
 사용자 정보, 메뉴 목록, 장바구니 등의 데이터를 파일에 저장하고, 이를 통해 데이터베이스와 유사한 구조를 설계하였습니다.
 
-**DB를 이용한 프로젝트 링크: [https://www.youtube.com/watch?v=OmIOxTL1YpA](https://github.com/KANGJIHYEON1121/kh-db-kiosk)**
+**DB를 이용한 프로젝트 링크: https://github.com/KANGJIHYEON1121/kh-db-kiosk**
 
 
 ---
